@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             QuestAdvanceLayout_050Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ActivitasPertama(
+                    Profil(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -38,7 +38,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 }
 
 @Preview(showBackground = true)
-@Composable
+ @Composable
 fun GreetingPreview() {
     QuestAdvanceLayout_050Theme {
         Greeting("Android")
