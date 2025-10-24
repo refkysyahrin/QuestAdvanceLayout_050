@@ -27,6 +27,9 @@ fun Profil(modifier: Modifier) {
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Spacer(modifier = Modifier. height(32.dp))
+
+
 
 
     }
