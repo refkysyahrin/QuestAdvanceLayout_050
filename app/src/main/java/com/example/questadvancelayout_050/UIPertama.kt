@@ -59,10 +59,10 @@ fun ActivitasPertama(modifier: Modifier){
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(all = 10.dp)
             ) {
-                val gambar = painterResource(id = R.drawable.logoumy)
+                val gambar = painterResource(id = R.drawable.masa_kecil2)
                 Image(
                     painter = gambar,
-                    contentScale = null,
+                    contentDescription = null,
                     modifier = Modifier
                         .size(size = 100.dp)
                         .padding(all = 5.dp)
@@ -80,7 +80,7 @@ fun ActivitasPertama(modifier: Modifier){
                     Text(
                         text = stringResource(id = R.string.alamat),
                         fontSize = 20.sp,
-                        color = Color.Red,
+                        color = Color.Yellow,
                         modifier = Modifier.padding(top = 10.dp)
                     )
                 }
