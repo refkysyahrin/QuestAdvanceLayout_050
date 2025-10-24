@@ -37,9 +37,6 @@ fun Profil(modifier: Modifier) {
                 .clip(CircleShape),
             contentScale = ContentScale.Crop
         )
-
-
-
-
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }
