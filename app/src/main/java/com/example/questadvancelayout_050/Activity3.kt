@@ -46,6 +46,36 @@ fun Profil(modifier: Modifier) {
             horizontalArrangement = Arrangement.spacedBy(16.dp), // Memberi jarak antar icon
             verticalAlignment = Alignment.CenterVertically
         ) {
+            Image(
+                painter = painterResource(id = R.drawable.logoig),
+                contentDescription = "Instagram",
+                modifier = Modifier
+                    .size(40.dp)
+                    .clip(CircleShape)
+            )
+            Image(
+                painter = painterResource(id = R.drawable.logowa),
+                contentDescription = "WhatsApp",
+                modifier = Modifier
+                    .size(40.dp)
+                    .clip(CircleShape)
+            )
+            Image(
+                painter = painterResource(id = R.drawable.logotiktok),
+                contentDescription = "Tiktok",
+                modifier = Modifier
+                    .size(40.dp)
+                    .clip(CircleShape)
+            )
+            Image(
+                painter = painterResource(id = R.drawable.logotwitter),
+                contentDescription = "Twitter",
+                modifier = Modifier
+                    .size(40.dp)
+                    .clip(CircleShape)
+            )
+
+
 
         }
     }
