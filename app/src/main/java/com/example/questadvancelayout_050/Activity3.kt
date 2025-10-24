@@ -2,7 +2,9 @@ package com.example.questadvancelayout_050
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -38,5 +40,13 @@ fun Profil(modifier: Modifier) {
             contentScale = ContentScale.Crop
         )
         Spacer(modifier = Modifier.height(16.dp))
+
+        // Baris untuk ikon media sosial
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(16.dp), // Memberi jarak antar icon
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+
+        }
     }
 }
