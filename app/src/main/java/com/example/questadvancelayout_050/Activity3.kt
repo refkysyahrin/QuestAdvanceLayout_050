@@ -29,6 +29,15 @@ fun Profil(modifier: Modifier) {
     ) {
         Spacer(modifier = Modifier. height(32.dp))
 
+        Image(
+            painter = painterResource(id = R.drawable.masa_kecil2),
+            contentDescription = "Foto Profil",
+            modifier = Modifier
+                .size(120.dp)
+                .clip(CircleShape),
+            contentScale = ContentScale.Crop
+        )
+
 
 
 
