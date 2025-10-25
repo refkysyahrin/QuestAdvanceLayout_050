@@ -2,6 +2,7 @@ package com.example.questadvancelayout_050
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,6 +26,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -37,7 +39,7 @@ fun Profil(modifier: Modifier) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Black)
+            .background(color = colorResource(id = R.color.napi))
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -47,9 +49,11 @@ fun Profil(modifier: Modifier) {
             painter = painterResource(id = R.drawable.masa_kecil2),
             contentDescription = "Foto Profil",
             modifier = Modifier
-                .size(120.dp)
-                .clip(CircleShape),
+                .size(150.dp)
+                .clip(CircleShape)
+                .border(width = 2.dp, color = colorResource(id = R.color.white), CircleShape),
             contentScale = ContentScale.Crop
+
         )
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -59,31 +63,31 @@ fun Profil(modifier: Modifier) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
-                painter = painterResource(id = R.drawable.logoig),
+                painter = painterResource(id = R.drawable.ighd),
                 contentDescription = "Instagram",
                 modifier = Modifier
-                    .size(40.dp)
+                    .size(30.dp)
                     .clip(CircleShape)
             )
             Image(
-                painter = painterResource(id = R.drawable.logowa),
+                painter = painterResource(id = R.drawable.wahd),
                 contentDescription = "WhatsApp",
                 modifier = Modifier
-                    .size(40.dp)
+                    .size(30.dp)
                     .clip(CircleShape)
             )
             Image(
-                painter = painterResource(id = R.drawable.logotiktok),
+                painter = painterResource(id = R.drawable.tiktokhd),
                 contentDescription = "Tiktok",
                 modifier = Modifier
-                    .size(40.dp)
+                    .size(30.dp)
                     .clip(CircleShape)
             )
             Image(
-                painter = painterResource(id = R.drawable.logotwitter),
-                contentDescription = "Twitter",
+                painter = painterResource(id = R.drawable.facebookhd),
+                contentDescription = "Facebook",
                 modifier = Modifier
-                    .size(40.dp)
+                    .size(30.dp)
                     .clip(CircleShape)
             )
         }
@@ -114,7 +118,7 @@ fun Profil(modifier: Modifier) {
         )
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Tombol Privasi
+        // Tombol Instagram
         Button(
             onClick = {   },
             shape = RoundedCornerShape(50),
@@ -123,17 +127,17 @@ fun Profil(modifier: Modifier) {
         ) {
             Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                 Image(
-                    painter = painterResource(id = R.drawable.logoprivasi),
-                    contentDescription = "Privasi Icon",
+                    painter = painterResource(id = R.drawable.ighd),
+                    contentDescription = "Instagram Icon",
                     modifier = Modifier.size(50.dp)
                         .clip(CircleShape),
                     contentScale = ContentScale.Crop
                 )
                 Spacer(modifier = Modifier.width(24.dp))
-                Text("Privacy", color = Color.White, fontSize = 16.sp)
+                Text("My Instagram", color = Color.White, fontSize = 16.sp)
                 Spacer(modifier = Modifier.weight(1f))
                 Image(
-                    painter = painterResource(id = R.drawable.logoplay),
+                    painter = painterResource(id = R.drawable.playhd),
                     contentDescription = "Arrow Icon",
                     modifier = Modifier.size(24.dp)
                         .clip(CircleShape),
@@ -143,7 +147,7 @@ fun Profil(modifier: Modifier) {
         }
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Tombol Riwayat Transaksi
+        // Tombol GitHub
         Button(
             onClick = {   },
             shape = RoundedCornerShape(50),
@@ -155,7 +159,7 @@ fun Profil(modifier: Modifier) {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.logogithub),
+                    painter = painterResource(id = R.drawable.githubhd),
                     contentDescription = "GitHub Icon",
                     modifier = Modifier.size(50.dp)
                         .clip(CircleShape),
@@ -165,7 +169,7 @@ fun Profil(modifier: Modifier) {
                 Text("GitHub", color = Color.White, fontSize = 16.sp)
                 Spacer(modifier = Modifier.weight(1f))
                 Image(
-                    painter = painterResource(id = R.drawable.logoplay),
+                    painter = painterResource(id = R.drawable.playhd),
                     contentDescription = "Arrow Icon",
                     modifier = Modifier.size(24.dp)
                         .clip(CircleShape),
@@ -187,7 +191,7 @@ fun Profil(modifier: Modifier) {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.logopenganturan2),
+                    painter = painterResource(id = R.drawable.settinghd),
                     contentDescription = "Pengaturan Icon",
                     modifier = Modifier.size(50.dp)
                         .clip(CircleShape),
@@ -197,7 +201,7 @@ fun Profil(modifier: Modifier) {
                 Text("Pengaturan", color = Color.White, fontSize = 16.sp)
                 Spacer(modifier = Modifier.weight(1f))
                 Image(
-                    painter = painterResource(id = R.drawable.logoplay),
+                    painter = painterResource(id = R.drawable.playhd),
                     contentDescription = "Arrow Icon",
                     modifier = Modifier.size(24.dp)
                         .clip(CircleShape),
@@ -206,7 +210,7 @@ fun Profil(modifier: Modifier) {
             }
         }
 
-        Spacer(modifier = Modifier.height(80.dp))
+        Spacer(modifier = Modifier.height(60.dp))
 
         //Tombol Logout
         Button(
@@ -230,7 +234,7 @@ fun Profil(modifier: Modifier) {
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.logoexit),
+                        painter = painterResource(id = R.drawable.backhd),
                         contentDescription = "Logout Icon",
                         modifier = Modifier.size(24.dp)
                             .clip(CircleShape),
