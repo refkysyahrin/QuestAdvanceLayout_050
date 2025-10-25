@@ -3,6 +3,7 @@ package com.example.questadvancelayout_050
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -172,7 +173,7 @@ fun Profil(modifier: Modifier) {
                 )
             }
         }
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         // Tombol Pengaturan
         Button(
@@ -205,8 +206,7 @@ fun Profil(modifier: Modifier) {
             }
         }
 
-        Spacer(modifier = Modifier.height(12.dp))
-        Spacer(modifier = Modifier.weight(1f)) //Mendorong tombol logout ke bawah
+        Spacer(modifier = Modifier.height(80.dp))
 
         //Tombol Logout
         Button(
@@ -217,22 +217,38 @@ fun Profil(modifier: Modifier) {
                 .fillMaxWidth(0.6f)
                 .height(56.dp)
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center) {
-                Image(
-                    painter = painterResource(id = R.drawable.logoexit),
-                    contentDescription = "Logout Icon",
-                    modifier = Modifier.size(24.dp)
-                        .clip(CircleShape),
-                    contentScale = ContentScale.Crop
-                )
-                Spacer(modifier = Modifier.width(8.dp))
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
+
+                Box(
+                    modifier = Modifier
+                        .size(28.dp)
+                        .clip(CircleShape)
+                        .background(Color.White),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.logoexit),
+                        contentDescription = "Logout Icon",
+                        modifier = Modifier.size(24.dp)
+                            .clip(CircleShape),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+                Spacer(modifier = Modifier.width(12.dp))
                 Text("Logout", color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold)
             }
         }
 
+        Spacer(modifier = Modifier.height(5.dp))
+
+        Text(
+            text = stringResource(id = R.string.copy),
+            color = Color.White,
+            fontSize = 12.sp
+        )
         Spacer(modifier = Modifier.height(16.dp))
-
-
-
         }
 }
