@@ -204,7 +204,33 @@ fun Profil(modifier: Modifier) {
                 )
             }
         }
+
+        Spacer(modifier = Modifier.height(12.dp))
         Spacer(modifier = Modifier.weight(1f)) //Mendorong tombol logout ke bawah
+
+        //Tombol Logout
+        Button(
+            onClick = {     },
+            shape = RoundedCornerShape(50),
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Red),
+            modifier = Modifier
+                .fillMaxWidth(0.6f)
+                .height(56.dp)
+        ) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center) {
+                Image(
+                    painter = painterResource(id = R.drawable.logoexit),
+                    contentDescription = "Logout Icon",
+                    modifier = Modifier.size(24.dp)
+                        .clip(CircleShape),
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text("Logout", color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+            }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
 
 
 
