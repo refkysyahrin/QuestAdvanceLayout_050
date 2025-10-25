@@ -139,11 +139,40 @@ fun Profil(modifier: Modifier) {
                     contentScale = ContentScale.Crop
                 )
             }
+        }
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Tombol Riwayat Transaksi
+        Button(
+            onClick = {   },
+            shape = RoundedCornerShape(50),
+            colors = ButtonDefaults.buttonColors(containerColor = Color.DarkGray),
+            modifier = Modifier.fillMaxWidth().height(75.dp)
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.logogithub),
+                    contentDescription = "GitHub Icon",
+                    modifier = Modifier.size(50.dp)
+                        .clip(CircleShape),
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.width(24.dp))
+                Text("Privacy", color = Color.White, fontSize = 16.sp)
+                Spacer(modifier = Modifier.weight(1f))
+                Image(
+                    painter = painterResource(id = R.drawable.logoplay),
+                    contentDescription = "Arrow Icon",
+                    modifier = Modifier.size(24.dp)
+                        .clip(CircleShape),
+                    contentScale = ContentScale.Crop
+                )
+            }
+
 
         }
-
-
-
-
-    }
+        }
 }
