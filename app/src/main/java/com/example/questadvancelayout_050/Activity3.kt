@@ -93,12 +93,21 @@ fun Profil(modifier: Modifier) {
        )
        Text(
             text = stringResource(id = R.string.akun),
-            fontSize = 20.sp,
+            fontSize = 16.sp,
             fontFamily = FontFamily.Serif,
             color = Color.White,
             modifier = Modifier.padding(top = 1.dp)
         )
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Text(
+            text = stringResource(id = R.string.qoutes),
+            color = Color.White,
+            fontSize = 20.sp,
+            modifier = Modifier.padding(top = 0.dp)
+        )
+
+
 
 
     }
