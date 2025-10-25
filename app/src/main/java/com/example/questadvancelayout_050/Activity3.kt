@@ -104,7 +104,7 @@ fun Profil(modifier: Modifier) {
        Text(
             text = stringResource(id = R.string.akun),
             fontSize = 16.sp,
-            fontFamily = FontFamily.Serif,
+            fontFamily = FontFamily.Default,
             color = Color.White,
             modifier = Modifier.padding(top = 1.dp)
         )
